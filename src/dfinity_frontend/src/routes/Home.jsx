@@ -63,9 +63,7 @@ function Home() {
                 onChange={handleFileOnChange}
               />
             </Button>
-            <Button size="small" variant="contained" color="primary">
-              Mint
-            </Button>
+            <Link to="/customers/create">Create</Link>
           </Grid>
         </CardActions>
         <CardContent>

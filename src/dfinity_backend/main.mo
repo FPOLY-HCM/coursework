@@ -1,4 +1,5 @@
 import Bool "mo:base/Bool";
+import HashMap "mo:base/HashMap";
 import Int "mo:base/Blob";
 import Nat16 "mo:base/Nat16";
 import Nat32 "mo:base/Nat32";
@@ -11,10 +12,11 @@ actor {
    * Customer Type
   */
   public type Customer = {
-    name: Text;
-    birthday: Text;
-    phone: Text;
-    sex: Nat16;
+    id : Nat32;
+    name : Text;
+    birthday : Text;
+    phone : Text;
+    sex : Nat16;
   };
 
   /**
@@ -25,6 +27,12 @@ actor {
   private stable var nextId : CustomerId = 0;
   private stable var customers : Trie.Trie<CustomerId, Customer> = Trie.empty();
 
+  /**
+   ** List customer
+  */
+  public func list() : async [Customer] {
+    return [];
+  };
 
   /**
    ** Read customer

@@ -8,6 +8,7 @@ import {
   Button,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 const pages = ['Home', 'My Pets', 'Marketplace'];
 
@@ -46,8 +47,11 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Top 1 Hackathon
+            <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
+              Top 1 Hackathon
+            </Link>
           </Typography>
           {connected ? (
             <Button color="inherit">Connected</Button>
