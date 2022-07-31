@@ -31,7 +31,7 @@ export default function Create() {
         <TextField
           label="ID"
           type="text"
-          value={customer.name}
+          value={customer.id}
           onChange={(e) =>
             setCustomer({ ...customer, id: parseInt(e.target.value) })
           }
